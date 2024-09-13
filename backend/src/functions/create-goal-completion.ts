@@ -7,7 +7,7 @@ interface CreateGoalCompletionRequest {
   goalId: string
 }
 
-export async function CreateGoalCompletion({
+export async function createGoalCompletion({
   goalId,
 }: CreateGoalCompletionRequest) {
   const lastDayOfWeek = dayjs().endOf('week').toDate()
@@ -23,7 +23,8 @@ export async function CreateGoalCompletion({
       .where(
         and(
           gte(goalCompletions.createdAt, firstDayOfWeek),
-          lte(goalCompletions.createdAt, lastDayOfWeek)
+          lte(goalCompletions.createdAt, lastDayOfWeek),
+          eq(goalCompletions.goalId, goalId)
         )
       )
       .groupBy(goalCompletions.goalId)
@@ -39,15 +40,23 @@ export async function CreateGoalCompletion({
     })
     .from(goals)
     .leftJoin(goalCompletionCounts, eq(goalCompletionCounts.goalId, goals.id))
+    .where(eq(goals.id, goalId))
+    .limit(1)
 
-  const result = await db
+  const {completionCount, desiredWeeklyFrequency} = result[0]
+
+  if (completionCount >= desiredWeeklyFrequency) {
+    throw new  Error('Goal already completed this week!')
+  }
+
+  const insertResult = await db
     .insert(goalCompletions)
     .values({
       goalId,
     })
     .returning()
 
-  const goalCompletion = result[0]
+  const goalCompletion = insertResult[0]
 
   return {
     goalCompletion,
