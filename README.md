@@ -5,8 +5,8 @@ A aplicação utiliza o PostgreSQL como banco de dados relacional, onde as tabel
 
 Além disso, o projeto incorpora funções para lidar com a agregação de dados, utilizando SQL para agrupar e contar metas concluídas por dia da semana. <br> A aplicação também permite criar novas metas e registrar suas respectivas conclusões, com validação para garantir que uma meta não seja marcada como concluída mais vezes do que o permitido durante a semana. <br>
 
-Tecnologias e habilidades utilizadas:
-JavaScript: para a lógica de frontend e backend. <br>
+Tecnologias e habilidades utilizadas:  <br>
+Typescript: para a lógica de frontend e backend. <br>
 Node.js: para construir a API e integrar com o banco de dados. <br>
 Drizzle ORM: para mapear e interagir com o banco de dados. <br>
 PostgreSQL: banco de dados relacional para armazenar metas e conclusões. <br>
