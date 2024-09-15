@@ -1,5 +1,5 @@
 
-Este projeto é uma aplicação de gestão de metas semanais, desenvolvida utilizando Drizzle ORM para facilitar a interação com o banco de dados. <br> A aplicação possui funcionalidades como a criação, acompanhamento e conclusão de metas semanais. <br> O usuário pode visualizar um resumo das metas concluídas, além de metas pendentes para a semana atual. <br>
+Este projeto é uma aplicação de gestão de metas semanais feita em um evento online da Rocketseat-NLW Pocket: Javascript, desenvolvida utilizando Drizzle ORM para facilitar a interação com o banco de dados. <br> A aplicação possui funcionalidades como a criação, acompanhamento e conclusão de metas semanais. <br> O usuário pode visualizar um resumo das metas concluídas, além de metas pendentes para a semana atual. <br>
 
 A aplicação utiliza o PostgreSQL como banco de dados relacional, onde as tabelas de metas e suas conclusões são armazenadas e manipuladas através de queries SQL. <br> Para o controle e formatação de datas, a biblioteca Day.js é usada, permitindo o cálculo de intervalos como o início e o fim da semana atual. <br>
 
