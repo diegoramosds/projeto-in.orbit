@@ -16,3 +16,6 @@ HTML/CSS: para estruturar e estilizar a interface do usuário. <br>
 <br> As principais habilidades desenvolvidas neste projeto incluem a criação de APIs RESTful, manipulação de banco de dados SQL, uso de ORM para abstrair a camada de persistência de dados, além de validação de dados e manipulação de datas no contexto de metas semanais.
 
 
+![Captura de tela 2024-09-15 163146](https://github.com/user-attachments/assets/e2001860-df2b-467f-8cf8-53c95a2b8ca1)
+![Captura de tela 2024-09-15 163200](https://github.com/user-attachments/assets/fe32e9dd-cd46-4077-b041-ee5e0b11585c)
+![Captura de tela 2024-09-15 165141](https://github.com/user-attachments/assets/e1c2a8a5-50ff-4800-906c-f30c801e808b)
