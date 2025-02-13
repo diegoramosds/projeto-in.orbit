@@ -32,3 +32,6 @@ app
   .then(() => {
     console.log('HTTP server running!')
   })
+.catch((err) => {
+  console.log('Err', err)
+})
