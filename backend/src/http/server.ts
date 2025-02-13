@@ -15,7 +15,6 @@ const app = fastify().withTypeProvider<ZodTypeProvider>()
 
 app.register(fastifyCors, {
   origin: '*',
-  
 })
 
 app.setValidatorCompiler(validatorCompiler)
@@ -28,8 +27,8 @@ app.register(getWeekSummaryRoute)
 
 app
   .listen({
-    port: 3333,
+    port: Number(process.env.PORT) || 3333,
   })
   .then(() => {
-    console.log('HTTP sever running!')
+    console.log('HTTP server running!')
   })
