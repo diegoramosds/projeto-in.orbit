@@ -25,6 +25,11 @@ app.register(createCompletionRoute)
 app.register(getPendingGoalsRoute)
 app.register(getWeekSummaryRoute)
 
+// Adicionando uma rota para evitar erro 404 na raiz "/"
+app.get('/', async (_, reply) => {
+  return reply.send({ message: 'API funcionando!' })
+})
+
 app
   .listen({
     port: Number(process.env.PORT) || 3333,
@@ -33,6 +38,3 @@ app
   .then(() => {
     console.log('HTTP server running!')
   })
-.catch((err) => {
-  console.log('Err', err)
-})
