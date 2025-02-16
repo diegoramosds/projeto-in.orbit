@@ -3,11 +3,14 @@ interface CreateGoalRequest {
   desiredWeeklyFrequency: number
 }
 
+
 export async function createGoal({
   title,
   desiredWeeklyFrequency,
 }: CreateGoalRequest) {
-  await fetch('http://localhost:3333/goals', {
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3333';
+
+  await fetch(`${API_URL}/goals`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
