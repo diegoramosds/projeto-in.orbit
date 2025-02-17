@@ -3,5 +3,5 @@
     "out": "./.migrations",
     "dialect": "postgresql",
     "dbCredentials": {
-    "url": "postgres://ue7m7fkg6g28ip:pd63b9bd6dcb3a298f8ba125fcb467799d0df93cd40eccf51b9ee20f7a5d4ed4f@cd5gks8n4kb20g.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/dffk5n3m7slt0m?sslmode=require"
+    "url": "postgres://ue7m7fkg6g28ip:pd63b9bd6dcb3a298f8ba125fcb467799d0df93cd40eccf51b9ee20f7a5d4ed4f@cd5gks8n4kb20g.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/dffk5n3m7slt0m?ssl=true&sslmode=require"
     }}
