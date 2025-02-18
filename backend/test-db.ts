@@ -1,4 +1,7 @@
-import pool from './db';
+// test-db.ts
+import { pool } from './db';
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function testConnection() {
   try {
