@@ -1,12 +1,14 @@
 import { Pool } from 'pg';
+import { config } from 'dotenv';
 
-export const pool = new Pool({
-  connectionString: process.env.SUPABASE_DATABASE_URL,
+// Carrega as variáveis de ambiente do arquivo .env
+config();
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false, // Caso contrário, pode ser necessário configurar SSL
+    rejectUnauthorized: false,
   },
 });
 
-pool.connect()
-  .then(() => console.log("Conexão com o banco de dados Supabase bem-sucedida!"))
-  .catch((err: Error) => console.error("Erro ao conectar com o banco de dados:", err));
+export default pool;

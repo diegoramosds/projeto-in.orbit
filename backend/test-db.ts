@@ -1,7 +1,13 @@
-// test-db.ts
-import { pool } from './db';
-import dotenv from 'dotenv';
-dotenv.config();
+import { Pool } from 'pg';
+import { config } from 'dotenv';
+
+// Carregar variáveis de ambiente do arquivo .env
+config();
+
+// Obter a URL do banco de dados do arquivo .env
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
 
 async function testConnection() {
   try {
