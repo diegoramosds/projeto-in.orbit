@@ -5,19 +5,11 @@ dotenv.config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false },
-  host: 'db.qofqsbwhpuitiafpkndy.supabase.co', // Força uso de IPv4
-  port: 5432,
+  ssl: { rejectUnauthorized: false } // Necessário para o Heroku
 });
 
-const testConnection = async () => {
-  try {
-    const client = await pool.connect();
-    console.log('Conectado ao banco de dados!');
-    client.release();
-  } catch (error) {
-    console.error('Erro ao conectar com o banco de dados:', error);
-  }
-};
+pool.connect()
+  .then(() => console.log('✅ Conectado ao banco de dados'))
+  .catch(err => console.error('❌ Erro ao conectar com o banco de dados:', err));
 
-testConnection();
+export default pool;
