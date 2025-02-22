@@ -11,6 +11,10 @@ import { getPendingGoalsRoute } from './routes/get-pending-goals'
 import { getWeekSummaryRoute } from './routes/get-week-summary'
 import fastifyCors from '@fastify/cors'
 
+const sslRootCAs = require('ssl-root-cas').create();
+
+sslRootCAs.inject();
+
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
 app.register(fastifyCors, {

@@ -1,18 +1,18 @@
 import { defineConfig } from 'drizzle-kit'
 import { env } from './src/env'
+import * as fs from "node:fs";
 
-// Adiciona sslmode=require (e opcionalmente ssl=true) à URL
-const dbUrl = env.DATABASE_URL.includes('?')
-  ? `${env}&ssl=true&sslmode=require`
-  : `${env.DATABASE_URL}?ssl=true&sslmode=require`;
+const databaseUrl = `${process.env.DATABASE_URL}?sslmode=require`;
+
 
 export default defineConfig({
   schema: './src/db/schema.ts',
   out: './.migrations',
   dialect: 'postgresql',
   dbCredentials: {
-    url: dbUrl,
+    url: databaseUrl,
     ssl: {
+      ca: fs.readFileSync("./certs/us-east-1-bundle.pem").toString(),
       rejectUnauthorized: false,
     }
   },
