@@ -1,11 +1,13 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
-
+import * as fs from 'node:fs';
 dotenv.config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false } // Necessário para o Heroku
+  ssl: { rejectUnauthorized: false,
+  ca: fs.readFileSync('./certs/us-east-1-bundle.pem').toString(),
+   } // Necessário para o Heroku
 });
 
 pool.connect()
