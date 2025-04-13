@@ -1,18 +1,54 @@
-Este projeto é uma aplicação de gestão de metas semanais feita em um evento online que participei, da Rocketseat-NLW Pocket: Javascript, desenvolvida utilizando Drizzle ORM para facilitar a interação com o banco de dados. <br> A aplicação possui funcionalidades como a criação, acompanhamento e conclusão de metas semanais. <br> O usuário pode visualizar um resumo das metas concluídas, além de metas pendentes para a semana atual. <br>
+# 🚀 in.orbit – Gerenciador de Metas Semanais
 
-A aplicação utiliza o PostgreSQL como banco de dados relacional, onde as tabelas de metas e suas conclusões são armazenadas e manipuladas através de queries SQL. <br> Para o controle e formatação de datas, a biblioteca Day.js é usada, permitindo o cálculo de intervalos como o início e o fim da semana atual. <br>
+## 📽️ Demonstração  
+![in orbit](https://github.com/user-attachments/assets/cf8cd7b7-6510-43d6-8c5b-b5b388d3696a)
 
-Além disso, o projeto incorpora funções para lidar com a agregação de dados, utilizando SQL para agrupar e contar metas concluídas por dia da semana. <br> A aplicação também permite criar novas metas e registrar suas respectivas conclusões, com validação para garantir que uma meta não seja marcada como concluída mais vezes do que o permitido durante a semana. <br>
 
-Tecnologias e habilidades utilizadas:  <br>
-Typescript: para a lógica de frontend e backend. <br>
-Node.js: para construir a API e integrar com o banco de dados. <br>
-Drizzle ORM: para mapear e interagir com o banco de dados. <br>
-PostgreSQL: banco de dados relacional para armazenar metas e conclusões. <br>
-SQL: para executar queries complexas, como agregação e agrupamento de dados. <br>
-Day.js: para manipulação e cálculo de datas. <br>
-HTML/CSS: para estruturar e estilizar a interface do usuário. <br>
-<br> As principais habilidades desenvolvidas neste projeto incluem a criação de APIs RESTful, manipulação de banco de dados SQL, uso de ORM para abstrair a camada de persistência de dados, além de validação de dados e manipulação de datas no contexto de metas semanais.
+---
+
+## 📋 Sobre o Projeto
+
+Este projeto é uma aplicação de **gestão de metas semanais**, desenvolvida durante o evento **Rocketseat - NLW Pocket: JavaScript**.  
+Seu principal objetivo é permitir que os usuários criem, acompanhem e concluam metas ao longo da semana, mantendo um controle visual do progresso.
+
+A aplicação foi construída com **TypeScript** tanto no frontend quanto no backend, e utiliza o **Drizzle ORM** para facilitar a comunicação com o banco de dados relacional **PostgreSQL**.  
+Com a ajuda da biblioteca **Day.js**, a aplicação consegue determinar com precisão o início e o fim da semana, além de realizar cálculos de datas.
+A aplicação também possui validações que impedem a marcação de uma meta como concluída mais vezes do que o permitido durante a semana.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- ✔️ **TypeScript** – Linguagem principal para lógica do frontend e backend  
+- ✔️ **Node.js** – Backend e construção da API RESTful  
+- ✔️ **Drizzle ORM** – Abstração e interação com o banco de dados  
+- ✔️ **PostgreSQL** – Banco de dados relacional para armazenar metas e conclusões  
+- ✔️ **SQL** – Queries avançadas com agregação e agrupamento  
+- ✔️ **Day.js** – Manipulação e cálculo de datas semanais  
+- ✔️ **HTML/CSS** – Estrutura e estilização da interface  
+
+---
+
+## ✨ Destaques
+
+### **🗓️ Criação e Gerenciamento de Metas**
+Permite ao usuário criar metas semanais e acompanhar seu progresso com base na semana atual.
+
+### **📊 Resumo Visual por Semana**
+Exibe estatísticas diárias de metas concluídas, com agrupamento e contagem via SQL.
+
+### **✅ Validação de Conclusões**
+Garante que metas não sejam concluídas mais vezes do que o previsto para a semana.
+
+### **🧠 Manipulação de Datas**
+Utiliza **Day.js** para definir corretamente o início e fim da semana e realizar cálculos relacionados ao tempo.
+
+### **🔎 Consulta e Agrupamento no Banco de Dados**
+Utiliza SQL e **Drizzle ORM** para agrupar, contar e filtrar dados diretamente no PostgreSQL.
+
+---
+
+
 
 
 ![Captura de tela 2024-09-15 163146](https://github.com/user-attachments/assets/e2001860-df2b-467f-8cf8-53c95a2b8ca1)
