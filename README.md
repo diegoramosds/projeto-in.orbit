@@ -47,10 +47,52 @@ Utiliza **Day.js** para definir corretamente o início e fim da semana e realiza
 Utiliza SQL e **Drizzle ORM** para agrupar, contar e filtrar dados diretamente no PostgreSQL.
 
 ---
+## ▶️ Passo a Passo  
 
+### 🛠 **Executando a API**  
 
+1️⃣ **Clone o repositório**:  
+```bash
+git clone https://github.com/diegoramosds/projeto-in.orbit.git
 
+```
 
-![Captura de tela 2024-09-15 163146](https://github.com/user-attachments/assets/e2001860-df2b-467f-8cf8-53c95a2b8ca1)
-![Captura de tela 2024-09-15 163200](https://github.com/user-attachments/assets/fe32e9dd-cd46-4077-b041-ee5e0b11585c)
-![Captura de tela 2024-09-15 165141](https://github.com/user-attachments/assets/e1c2a8a5-50ff-4800-906c-f30c801e808b)
+2️⃣ **Acesse o diretório da API** no terminal.
+```bash
+cd backend
+```
+
+3️⃣ Execute para instalar as dependências do projeto.
+```bash
+npm install
+```
+
+4️⃣ Execute para iniciar o servidor da API.
+```bash
+npm run dev
+```
+
+5️⃣ Aguarde até que a API esteja rodando e ouvindo requisições na porta especificada.
+
+<br>
+
+### 💻 **Executando a Aplicação React** 
+
+1️⃣ Acesse o diretório da aplicação React no terminal.
+```bash
+cd frontend
+cd web
+```
+
+2️⃣ Execute  para instalar as dependências do projeto.
+```bash
+npm install
+```
+
+3️⃣ Execute  para iniciar o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+4️⃣ Aguarde até que a aplicação seja compilada e inicie no navegador.
+
+5️⃣ Acesse a aplicação pelo navegador no endereço fornecido pelo terminal.
